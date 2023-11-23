@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MGM | User Registration</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='MGMLogo.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesforregister.css') }}">
+</head>
+<body>
+    <div class="registration-container">
+        <header>
+            <img src="{{ url_for('static', filename='MGMLogo.png') }}" alt="Header Image">
+            <h2>User Registration</h2>
+        </header>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="flash-messages">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        <form action="/register" method="POST">
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" class="registration-button">Sign Up</button>
+        </form>
+        <div class="divider"></div>
+        <div class="or">OR</div>
+        <div class="login-link">
+            Have an account? <a href="login">Log in</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

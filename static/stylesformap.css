@@ -1,0 +1,68 @@
+/* Reset some default styles for better consistency */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and set font styles for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #550003;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+header img {
+    max-width: 100px; 
+    margin-right: 20px; 
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red; 
+    font-size: 35px; 
+    font-weight: bold; 
+}
+
+header h2 {
+    font-size: 35px; 
+}
+
+/* Center the content on the page and provide some spacing */
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Apply basic styles to the map content */
+#map {
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Apply styles to make the map responsive on smaller screens */
+@media (max-width: 768px) {
+    #map {
+        height: 300px; /* Adjust the height for smaller screens */
+    }
+}

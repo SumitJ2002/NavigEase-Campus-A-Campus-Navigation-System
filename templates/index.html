@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MGM | Campus Navigation System</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='MGMLogo.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='MGMLogo.png') }}" alt="Header Image">
+        <h1>MGM's Campus Navigation Module</h1>
+    </header>
+    <form action="/map" method="POST">
+        <label for="start">Where you are:</label>
+        <select name="start">
+            <option value="Gate">Gate</option>
+            <option value="Eng">Engineering</option>
+            <option value="Canteen">Canteen</option>
+            <option value="Ground">Ground</option>
+            <option value="Civil">Civil</option>
+            <option value="Dental">Dental</option>
+            <option value="Hospital">Hospital</option>
+            <option value="Medical">Medical</option>
+            <option value="Parking">Parking</option>
+            <option value="Quarter">Quarter</option>
+            <option value="Poshan">Poshan</option>
+            <option value="Pros">Prosthetics And Orthotics</option>
+        </select>
+        <br>
+        <label for="target">Where you want to go:</label>
+        <select name="target">
+            <option value="Place11">Engineering</option>
+            <option value="Place1">Canteen</option>
+            <option value="Place2">Ground</option>
+            <option value="Place3">Civil</option>
+            <option value="Place4">Dental</option>
+            <option value="Place5">Hospital</option>
+            <option value="Place6">Medical</option>
+            <option value="Place7">Parking</option>
+            <option value="Place8">Poshan</option>
+            <option value="Place9">Prosthetics</option>
+            <option value="Place10">Staff Quarter</option>
+            <option value="Place12">Gate</option>
+        </select>
+        <br>
+        <input type="submit" value="Show Map">
+        <a href="{{ url_for('dashboard') }}" class="dashboard-button">Go To Dashboard</a>
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MGM | Campus Map</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='MGMLogo.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesformap.css') }}"> 
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='MGMLogo.png') }}" alt="Header Image">
+        <h2>MGM's Campus Map</h2>
+    </header>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    {{ map|safe }} 
+
+</body>
+</html>
+

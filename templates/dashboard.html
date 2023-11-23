@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MGM | Dashboard</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='MGMLogo.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesfordashboard.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <img src="{{ url_for('static', filename='MGMLogo.png') }}" alt="Header Image">
+            <h2>Welcome to Your Dashboard</h2>
+        </header>
+        <div class="user-info">
+            <h3>Welcome, {{ fullname }}</h3>  <!-- Change current_user.fullname to full_name -->
+        </div>
+        <a href="{{ url_for('index') }}" class="index-link">Go To Navigation Module</a>
+        <a href="{{ url_for('logout') }}" class="logout-link">Logout</a>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
